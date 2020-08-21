@@ -70,7 +70,7 @@
           <input th:id="${prompt.key}"
                  th:name="${prompt.key}"
                  th:type="${prompt.value[1] == 'Email' ? 'email' : prompt.value[0]}"
-                 th:attr="autocomplete='off'"
+                 th:attr="autocomplete='off',aria-describedby='${error ? '{prompt.key}-error' : ''}'"
                  class="govuk-input"/>
         </div>
 
