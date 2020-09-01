@@ -52,7 +52,8 @@
             novalidate="novalidate"
             accept-charset="UTF-8">
 
-        <div th:class="govuk-form-group ${error ? 'govuk-form-group--error' : ''}"
+        <div th:class="govuk-form-group"
+             th:classappend="${error}? ' govuk-form-group--error'"
              th:each="prompt,iter : ${prompts}">
           <label class="govuk-label"
                  th:attr="for=${prompt.key}"
